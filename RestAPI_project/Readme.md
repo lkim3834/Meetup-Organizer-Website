@@ -1,6 +1,10 @@
-cite : https://www.youtube.com/watch?v=9zJn3a7L1uE 
+reference cite : https://www.youtube.com/watch?v=9zJn3a7L1uE 
+page link : http://localhost:5121/swagger/index.html 
 use SwaggerHub website along with this project 
 1. Run "dotnet run watch" command and the SwaggerHub website would pop up 
+    - whenever "Address already in use" error appears, do
+        1. "lsof -i : <port number>"
+        2. "kill -9 <process number>"s
 2. Inside CharacterController.cs file, 
     - Get() function would get all character. 
     - GetSingle() function would get specific character with c.Id == id. SwaggerHub would require you to enter the id  (try 0 for Frodo and 1 for Sam)

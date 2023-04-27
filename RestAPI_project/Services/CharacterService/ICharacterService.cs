@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 Without this file, refreshing after POST execute would lose all the newCharcters */
 namespace RestAPI_project.Services.CharacterService
 {
-    public interface ICharcterService
+    public interface ICharacterService
     {
         List <Character> GetAllCharacters();
         Character  GetCharacterById(int id);

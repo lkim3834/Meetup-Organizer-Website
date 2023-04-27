@@ -7,7 +7,7 @@ namespace RestAPI_project.Services.CharacterService
 {
     // ICharcterService needed to be added (ICharacterServe.cs)
 
-    public class CharcterService : ICharcterService
+    public class CharacterService : ICharacterService
     {
         private static List<Character> characters = new List<Character> {
             new Character(),

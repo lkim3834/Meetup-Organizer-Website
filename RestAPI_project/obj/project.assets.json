@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/leejinkim/Desktop/RestAPI_project/RestAPI_project.csproj",
+      "projectUniqueName": "/Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/RestAPI_project.csproj",
       "projectName": "RestAPI_project",
-      "projectPath": "/Users/leejinkim/Desktop/RestAPI_project/RestAPI_project.csproj",
+      "projectPath": "/Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/RestAPI_project.csproj",
       "packagesPath": "/Users/leejinkim/.nuget/packages/",
-      "outputPath": "/Users/leejinkim/Desktop/RestAPI_project/obj/",
+      "outputPath": "/Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/leejinkim/.nuget/NuGet/NuGet.Config"

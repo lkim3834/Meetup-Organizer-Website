@@ -18,7 +18,7 @@ namespace RestAPI_project.Controllers
          //    new Character {Id = 1, Name = "Sam"}
          // };
          // command + . to see the more actions
-         // Injecting new character service into the controller
+         // Injecting new character service into the controller from ICharacterService.cs file
          private readonly ICharacterService _characterService;
          public CharacterController(ICharacterService characterService)
          {
@@ -47,15 +47,17 @@ namespace RestAPI_project.Controllers
    
             // FirstOrDefault: returns id if Id == id. Else, returns empty string
             // return Ok(characters.FirstOrDefault(c => c.Id == id ));
-            return Ok(_characterService.GetAllCharacters());
+            // return Ok(_characterService.GetAllCharacters());
+            return Ok(_characterService.GetCharacterById(id));
          }
          [HttpPost]
          public ActionResult<List<Character>> AddCharacter (Character newCharacter)
          {
             // add charcter in the list 
 
-            characters.Add(newCharacterService.characterService);
-            return Ok(characters );
+            // characters.Add(newCharacterService.characterService);
+            // return Ok(characters );
+            return Ok(_characterService.AddCharacter(newCharacter));
          }
     }
 }
