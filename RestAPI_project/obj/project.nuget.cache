@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "kwwpqNsKcjUUTkBreSOWYcc5w+8A9wU4BA7DTfbgrrCizBDj/vq7AhXkAG2a/bufklhVhln/uqR/T4DmAAECBg==",
+  "success": true,
+  "projectFilePath": "/Users/leejinkim/Desktop/RestAPI_project/RestAPI_project.csproj",
+  "expectedPackageFiles": [
+    "/Users/leejinkim/.nuget/packages/microsoft.aspnetcore.openapi/7.0.5/microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
+    "/Users/leejinkim/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/leejinkim/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/leejinkim/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/leejinkim/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/Users/leejinkim/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/Users/leejinkim/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
