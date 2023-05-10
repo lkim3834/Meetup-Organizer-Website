@@ -1,0 +1,124 @@
+[[extend 'layout.html']]
+<style>
+  [v-cloak] {
+       display: none;
+  }
+  </style>
+<div class="section" id="vue-target" v-cloak>
+  
+
+
+  <div class="container block">
+    <h1 class="title">Notifications</h1>
+
+  <!-- Put here your Vue.js template -->
+  <div class="tabs is-boxed is-centered">
+    <ul>
+      <li :class="{'is-active': tab==='all'}"><a @click="set_tab('all')">All</a></li>
+      <li :class="{'is-active': tab=== 'accepted'}"><a @click="set_tab( 'accepted')">Accepted</a></li>
+      <li :class="{'is-active': tab==='pending'}"><a @click="set_tab('pending')">Pending</a></li>
+      
+    </ul>
+   
+   </div>
+<!-- Tab content -->
+<div v-if="tab==='all'">
+ 
+  
+  <div v-for="r in rows.slice().reverse()">
+   <div v-if= "!r.accepted" >
+    <div class="notification mb-5">
+      <p class="title is-3 is-spaced"> Event title : {{r['event_title']}}</p>
+    
+      <p class="title is-5 is-spaced" > owner: {{r.event_creator}} </p>
+      <p class="title is-5 is-spaced" >  location: {{r.event_location}}</p>
+      <p class="title is-6 is-spaced">event description : {{r.event_description}}</p>
+      <!-- <div v-if= "!r.accepted" > -->
+      <!-- <div v-if= "r.hide" > -->
+      <!-- {{r.hide}}
+       -->
+      <input type="submit"  v-if= "!r.accepted" @click="addAccept(r._idx)" value="Accept" class="button is-primary">
+      <!-- </div> -->
+      <a @click="DeclineAccept(r._idx)" class="button is-warning">Decline</a>
+       
+      
+    </div>
+    </div>
+    <div v-else>
+      <div class="notification mb-5">
+      <p class="title is-3 is-spaced"> Event title : {{r['event_title']}}</p>
+    
+      <p class="title is-5 is-spaced" > owner: {{r.event_creator}} </p>
+      <p class="title is-5 is-spaced" >  location: {{r.event_location}}</p>
+
+      <p class="title is-6 is-spaced">event description : {{r.event_description}}</p>
+    </div>
+    </div>
+
+ 
+  
+  </div>
+  
+</div>
+
+<div v-if="tab==='pending'" >
+  
+  
+  <div v-for="r in rows.slice().reverse()">
+    <div v-if= "!r.accepted" >
+      <div class="notification mb-5">
+        <p class="title is-3 is-spaced"> Event title : {{r.event_title}}</p>
+      
+      
+        <p class="title is-5 is-spaced" > owner: {{r.event_creator}} </p>
+        <p class="title is-5 is-spaced" >  location: {{r.event_location}}</p>
+  
+        <p class="title is-6 is-spaced">event description : {{r.event_description}}</p>
+        <input type="submit" @click="addAccept(r._idx)" value="Accept" class="button is-primary">
+        <a @click="DeclineAccept(r._idx)" class="button is-warning">Decline</a>
+       
+      </div>
+
+    
+      
+    </div>
+  
+  </div>
+</div>
+<div v-if="tab ===''" >
+  <h2 class="subtitle">
+    Click on any tabs to see notifications
+  </h2>
+</div>
+<div v-if="tab ==='accepted'" >
+  <!-- <h3>Accepted notifications</h3> -->
+  <div v-for="r in rows.slice().reverse()">
+    <!-- {{r.accepted}} -->
+    <div v-if= "r.accepted" >
+      <!-- here you display the notification r -->
+      
+        <div class="notification mb-5">
+          <p class="title is-3 is-spaced"> Event title : {{r.event_title}}</p>
+        
+          <p class="title is-5 is-spaced" > owner: {{r.event_creator}} </p>
+          <p class="title is-5 is-spaced" >  location: {{r.event_location}}</p>
+          <p class="title is-6 is-spaced">event description : {{r.event_description}}</p>
+      
+        </div>
+    </div>
+  
+  </div>
+</div>  
+</div>
+</div>  
+
+  [[block page_scripts]]
+  
+  <script>
+     let all_url = "[[=XML(all_url)]]"
+     let get_accepted_url = "[[=XML(get_accepted_url)]]";
+     let set_accepted_url = "[[=XML(set_accepted_url)]]";
+
+  </script>
+  <script src="js/notifications.js"></script>
+  [[end]]
