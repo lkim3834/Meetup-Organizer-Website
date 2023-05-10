@@ -22,6 +22,9 @@
     - modify the return type of characterservice and Icharacterservice methods (add <ServiceResponse>)
 
 18. Explanation of Data-Transfer-Objects (DTOs),
+    - receiving characters from the server and sending a new character to the server.
+    - add getcharacterdto and addcharacterdto files in Dtos/Character
+    - change character -> getcharacterdto or addcharcterdto 
 19. Introduction to AutoMapper,
 20. Modifying a character using PUT,
 21. Modifying a character using AutoMapper,
