@@ -29,7 +29,7 @@ namespace RestAPI_project.Controllers
          // Character/GetAll => to ignore duplication for Get  
         [HttpGet("GetAll")]
         
-         public async Task<ActionResult<ServiceResponse<List<Character>>>> Get()
+         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Get()
          {
             // IActionResult return type is approrpriate when multiple ActionResult return types are
             // possible : ex. BadRequest, NotFound,.. OkObjectResult(200)
@@ -40,7 +40,7 @@ namespace RestAPI_project.Controllers
 
          // pass the id inside the parameter
          // async Task is used to pass the asynchronous task and await is used to wait for the task to complete
-         public async Task<ActionResult<ServiceResponse<Character>>> GetSingle(int id)
+         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> GetSingle(int id)
          {
             // IActionResult return type is approrpriate when multiple ActionResult return types are
             // possible : ex. BadRequest, NotFound,.. OkObjectResult(200)
@@ -52,7 +52,7 @@ namespace RestAPI_project.Controllers
             return Ok( await _characterService.GetCharacterById(id));
          }
          [HttpPost]
-         public async Task<ActionResult<ServiceResponse<List<Character>>>> AddCharacter (Character newCharacter)
+         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> AddCharacter (AddCharacterDto newCharacter)
          {
             // add charcter in the list 
 
