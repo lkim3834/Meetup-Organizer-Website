@@ -64,3 +64,5 @@
 /Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/obj/Debug/net7.0/RestAPI_project.csproj.CopyComplete
 /Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/obj/Debug/net7.0/RestAPI_project.genruntimeconfig.cache
 /Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/obj/Debug/net7.0/ref/RestAPI_project.dll
+/Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/bin/Debug/net7.0/AutoMapper.dll
+/Users/leejinkim/Desktop/Meetup-Organizer-Website/RestAPI_project/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
