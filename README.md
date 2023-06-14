@@ -7,6 +7,7 @@ A website, event organization platform, meant to make it easier for people to cr
 * Send notifications and emails to people invited to the event using Node.js as the backend and HTML/CSS as the frontend
 * Deploy a complete web-serving stack through google cloud platform using SQL language
 * How to implement Data-Transfer-Objects (DTOs) 
+* Asynchronous (occur independently) programming in C# 
 
 
 
