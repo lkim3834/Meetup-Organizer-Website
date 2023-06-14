@@ -6,6 +6,7 @@ A website, event organization platform, meant to make it easier for people to cr
 
 * Send notifications and emails to people invited to the event using Node.js as the backend and HTML/CSS as the frontend
 * Deploy a complete web-serving stack through google cloud platform using SQL language
+* How to implement Data-Transfer-Objects (DTOs) 
 
 
 
@@ -29,7 +30,13 @@ HTTP Request Methods ( defined )
 - POST (Create): submit an entity to the specified resource, often causing a change in state/side effects on the server (back-end)
 - PUT (Update): replaces all current representations of the target resource with the request payload
 - DELETE (delete): deletes the specified resource
-
+3. USe AutoMapper 
+    - why do we need AutoMapper?
+        a. To convert List<Character> to List<GetCharacterDto>
+        b. Map the objects by creating a new instance of the necessary class
+    - How to use them 
+        a. install automapper through command (https://automapper.org/)
+        b. Add it on Program.cs file and CharacterService.cs
 
 
 
