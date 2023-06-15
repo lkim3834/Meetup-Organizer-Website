@@ -2,10 +2,12 @@
 global using RestAPI_project.Models;
 global using RestAPI_project.Services.CharacterService;
 global using RestAPI_project.Dtos.Character;
+global using RestAPI_project.Data;
 global using AutoMapper;
 global using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddDbContext<DataContext>(options=>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
 
 builder.Services.AddControllers();

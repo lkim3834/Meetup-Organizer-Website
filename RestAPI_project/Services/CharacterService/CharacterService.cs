@@ -15,11 +15,18 @@ namespace RestAPI_project.Services.CharacterService
             new Character {Id = 1, Name = "Sam"}
          };
         private readonly IMapper _mapper;
+      //   private readonly DataContext _context;
+      //   private readonly IHttpContextAccessor _httpContextAccessor;
          // got the reference , used to map the Character to GetCharacterDto
          public CharacterService(IMapper mapper)
          {
             _mapper = mapper;
+            // _context= context;
+            // _httpContextAccessor = httpContextAccessor;
          }
+
+      //   private int GetUserId() => int.Parse(_httpContextAccessor.HttpContext!.User
+      //       .FindFirstValue(ClaimTypes.NameIdentifier)!);
          public async Task<ServiceResponse< List <GetCharacterDto>>> AddCharacter (AddCharacterDto newCharacter)
          {
             // add charcter in the list 
@@ -44,13 +51,12 @@ namespace RestAPI_project.Services.CharacterService
 
             try
             {
-                var character = await _context.Characters
-                    .FirstOrDefaultAsync(c => c.Id == id && c.User!.Id == GetUserId());
+                var character = characters.First(c => c.Id == id);
                 if (character is null)
                     throw new Exception($"Character with Id '{id}' not found.");
 
-                Characters.Remove(character);
-                serviceResponse.Data = Characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
+                characters.Remove(character);
+                serviceResponse.Data = characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
 
                
             }
