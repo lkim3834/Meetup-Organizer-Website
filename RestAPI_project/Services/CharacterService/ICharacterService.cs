@@ -17,4 +17,5 @@ namespace RestAPI_project.Services.CharacterService
         // need to create a new charcter file which is UpdateCharacterDto
         Task<ServiceResponse<GetCharacterDto>> UpdateCharacter(UpdateCharacterDto updatedCharacter);
         Task<ServiceResponse<List<GetCharacterDto>>> DeleteCharacter(int id);   
+    }
 }

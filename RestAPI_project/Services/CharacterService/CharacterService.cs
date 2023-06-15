@@ -15,11 +15,20 @@ namespace RestAPI_project.Services.CharacterService
             new Character {Id = 1, Name = "Sam"}
          };
         private readonly IMapper _mapper;
+      
+      //   private readonly IHttpContextAccessor _httpContextAccessor;
          // got the reference , used to map the Character to GetCharacterDto
-         public CharacterService(IMapper mapper)
+         private readonly DataContext _context;
+         public CharacterService(IMapper mapper, DataContext context)
          {
+           
             _mapper = mapper;
+            _context= context;
+            // _httpContextAccessor = httpContextAccessor;
          }
+
+      //   private int GetUserId() => int.Parse(_httpContextAccessor.HttpContext!.User
+      //       .FindFirstValue(ClaimTypes.NameIdentifier)!);
          public async Task<ServiceResponse< List <GetCharacterDto>>> AddCharacter (AddCharacterDto newCharacter)
          {
             // add charcter in the list 
@@ -37,38 +46,38 @@ namespace RestAPI_project.Services.CharacterService
             return serviceResponse;
          }
          
-         public async Task<ServiceResponse< List <GetCharacterDto>>> DeleteCharacter (int id )
-         {
+      
+        public async Task<ServiceResponse<List<GetCharacterDto>>> DeleteCharacter(int id)
+        {
             var serviceResponse = new ServiceResponse<List<GetCharacterDto>>();
-            try{
-           
-            var character = characters.FirstOrDefault(c => c.Id == id);
-            if (character is null){
-               throw new Exception($"Character with Id '{id}' not found");
 
+            try
+            {
+                var character = characters.FirstOrDefault(c => c.Id == id);
+                if (character is null)
+                    throw new Exception($"Character with Id '{id}' not found.");
+
+                characters.Remove(character);
+                serviceResponse.Data = characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
+
+               
             }
-            
+            catch (Exception ex)
+            {
+                serviceResponse.Success = false;
+                serviceResponse.Message = ex.Message;
+            }
 
-            characters.Remove(character);
-            serviceResponse.Data = characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
-
-          }
-          catch(Exception ex){
-            serviceResponse.Success = false;
-            serviceResponse.Message = ex.Message;
-          }
-           return serviceResponse;
-           
-
-
-         }
-         
+            return serviceResponse;
+        }
+    
          public async Task<ServiceResponse<List <GetCharacterDto>>> GetAllCharacters()
          {
             // IActionResult return type is approrpriate when multiple ActionResult return types are
             // possible : ex. BadRequest, NotFound,.. OkObjectResult(200)
             var serviceResponse = new ServiceResponse<List<GetCharacterDto>>();
-            serviceResponse.Data = characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
+            var dbcharacters = await _context.Characters.ToListAsync();
+            serviceResponse.Data = dbcharacters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
       
             return serviceResponse;
          }
@@ -84,7 +93,7 @@ namespace RestAPI_project.Services.CharacterService
             // Fix the possible argumentnullexception : test out for non existing id 
             
             var serviceResponse = new ServiceResponse<GetCharacterDto>();
-            var character = characters.FirstOrDefault(c => c.Id == id );
+            var dbcharacter = await _context.Characters.FirstOrDefaultAsync(c => c.Id == id );
 
             // if(character is not null){
             //    return character;
@@ -93,7 +102,7 @@ namespace RestAPI_project.Services.CharacterService
             // serviceResponse.Data = character;
 
             // Map the character to GetCharacterDto : source -> target
-            serviceResponse.Data = _mapper.Map<GetCharacterDto>(character);
+            serviceResponse.Data = _mapper.Map<GetCharacterDto>(dbcharacter );
             return serviceResponse; 
          }
 

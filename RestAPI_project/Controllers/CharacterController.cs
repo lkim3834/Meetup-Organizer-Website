@@ -78,19 +78,14 @@ namespace RestAPI_project.Controllers
          }
 
          [HttpDelete("{id}")]
-
-         // pass the id inside the parameter
-         // async Task is used to pass the asynchronous task and await is used to wait for the task to complete
-         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id)
-         {
-            
+        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id)
+        {
             var response = await _characterService.DeleteCharacter(id);
             if (response.Data is null)
             {
-               // NotFound: 404
-               return NotFound(response);
+                return NotFound(response);
             }
             return Ok(response);
-         }
+        }
     }
 }
