@@ -45,12 +45,17 @@ HTTP Request Methods ( defined )
         a. install automapper through command (https://automapper.org/)
         b. Add it on Program.cs file and CharacterService.cs
 
-# Web API using Microft entiy frameworkcore
+# Web API using Microft entity frameworkcore
     * Install the package ( https://www.nuget.org/packages/Microsoft.EntityFrameworkCore)
     * command : - dotnet add package Microsoft.EntityFrameworkCore
                 - dotnet add package Microsoft.EntityFrameworkCore.SQLServer
                 - dotnet add package Microsoft.EntityFrameworkCore.Design
     * install tool command : - dotnet tool update --global dotnet-ef
+    * Azure Data Studio :
+
+        - add a new query to add new data to the tables  :  <img width="692" alt="Screenshot 2023-06-15 at 3 19 22 PM" src="https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/e1c923c4-0811-429c-b1cb-8123084d2a20">
+    
+    
     
 
 
