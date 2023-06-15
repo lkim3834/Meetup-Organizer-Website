@@ -54,9 +54,7 @@ HTTP Request Methods ( defined )
     * Azure Data Studio :
 
         - add a new query to add new data to the tables  : 
-    
-    
-
+   
 
 <structure for the web API>  
 
