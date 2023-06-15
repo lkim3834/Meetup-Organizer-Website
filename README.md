@@ -10,7 +10,13 @@ A website, event organization platform, meant to make it easier for people to cr
 * Asynchronous (occur independently) programming in C# 
 
 
+# Summary for Web API 
 
+* Web API with all CRUD operations
+* HTTP request methods GET, POST, PUT & DELETE
+* Model-View Controller (MVC) pattern 
+* Real World concepts & practices 
+* Dependency injection, async/await, DTOs 
 
 
 # Web API using .NEt 7 
