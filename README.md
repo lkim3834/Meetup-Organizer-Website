@@ -47,6 +47,9 @@ HTTP Request Methods ( defined )
 
 # Web API using Microft entiy frameworkcore
     * Install the package ( https://www.nuget.org/packages/Microsoft.EntityFrameworkCore)
+    * command : - dotnet add package Microsoft.EntityFrameworkCore
+                - dotnet add package Microsoft.EntityFrameworkCore.SQLServer
+                - dotnet add package Microsoft.EntityFrameworkCore.Design
     
 
 
