@@ -11,6 +11,7 @@ namespace RestAPI_project
             // create a character or map into getcharacterDTO 
             CreateMap<Character, GetCharacterDto>();
             CreateMap<AddCharacterDto, Character>();
+            CreateMap<UpdateCharacterDto, Character>();
         }
     }
 }
