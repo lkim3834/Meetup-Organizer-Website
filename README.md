@@ -45,7 +45,9 @@ HTTP Request Methods ( defined )
         a. install automapper through command (https://automapper.org/)
         b. Add it on Program.cs file and CharacterService.cs
 
-
+# Web API using Microft entiy frameworkcore
+    * Install the package ( https://www.nuget.org/packages/Microsoft.EntityFrameworkCore)
+    
 
 
 <structure for the web API>  
