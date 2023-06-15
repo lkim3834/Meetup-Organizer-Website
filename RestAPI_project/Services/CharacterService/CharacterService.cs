@@ -37,32 +37,32 @@ namespace RestAPI_project.Services.CharacterService
             return serviceResponse;
          }
          
-         public async Task<ServiceResponse< List <GetCharacterDto>>> DeleteCharacter (int id )
-         {
+      
+        public async Task<ServiceResponse<List<GetCharacterDto>>> DeleteCharacter(int id)
+        {
             var serviceResponse = new ServiceResponse<List<GetCharacterDto>>();
-            try{
-           
-            var character = characters.FirstOrDefault(c => c.Id == id);
-            if (character is null){
-               throw new Exception($"Character with Id '{id}' not found");
 
+            try
+            {
+                var character = await _context.Characters
+                    .FirstOrDefaultAsync(c => c.Id == id && c.User!.Id == GetUserId());
+                if (character is null)
+                    throw new Exception($"Character with Id '{id}' not found.");
+
+                Characters.Remove(character);
+                serviceResponse.Data = Characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
+
+               
             }
-            
+            catch (Exception ex)
+            {
+                serviceResponse.Success = false;
+                serviceResponse.Message = ex.Message;
+            }
 
-            characters.Remove(character);
-            serviceResponse.Data = characters.Select(c => _mapper.Map<GetCharacterDto>(c)).ToList();
-
-          }
-          catch(Exception ex){
-            serviceResponse.Success = false;
-            serviceResponse.Message = ex.Message;
-          }
-           return serviceResponse;
-           
-
-
-         }
-         
+            return serviceResponse;
+        }
+    
          public async Task<ServiceResponse<List <GetCharacterDto>>> GetAllCharacters()
          {
             // IActionResult return type is approrpriate when multiple ActionResult return types are

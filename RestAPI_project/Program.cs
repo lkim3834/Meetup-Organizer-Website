@@ -3,6 +3,7 @@ global using RestAPI_project.Models;
 global using RestAPI_project.Services.CharacterService;
 global using RestAPI_project.Dtos.Character;
 global using AutoMapper;
+global using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
