@@ -11,8 +11,10 @@ namespace RestAPI_project.Services.CharacterService
     {
         // Task document : https://dotnettutorials.net/lesson/asynchronous-programming-in-csharp/#:~:text=In%20C%23.NET%2C%20the%20task,NET%20Framework%204.0.
         // Task is used to pass the asynchronous task
-        Task< ServiceResponse<List  <GetCharacterDto>>> GetAllCharacters();
+        Task<ServiceResponse<List<GetCharacterDto>>> GetAllCharacters();
         Task<ServiceResponse<GetCharacterDto>> GetCharacterById(int id);
-        Task<ServiceResponse<List <GetCharacterDto>>> AddCharacter (AddCharacterDto newCharacter);
-    }
+        Task<ServiceResponse<List<GetCharacterDto>>> AddCharacter(AddCharacterDto newCharacter);
+        // need to create a new charcter file which is UpdateCharacterDto
+        Task<ServiceResponse<GetCharacterDto>> UpdateCharacter(UpdateCharacterDto updatedCharacter);
+        Task<ServiceResponse<List<GetCharacterDto>>> DeleteCharacter(int id);   
 }

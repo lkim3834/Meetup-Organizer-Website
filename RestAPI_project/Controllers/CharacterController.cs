@@ -60,5 +60,37 @@ namespace RestAPI_project.Controllers
             // return Ok(characters );
             return Ok(await _characterService.AddCharacter(newCharacter));
          }
+
+         [HttpPut]
+         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> UpdateCharacter (UpdateCharacterDto UpdatedCharacter)
+         {
+            // add charcter in the list 
+
+            // characters.Add(newCharacterService.characterService);
+            // return Ok(characters );
+            var response = await _characterService.UpdateCharacter(UpdatedCharacter);
+            if (response.Data is null)
+            {
+               // NotFound: 404
+               return NotFound(response);
+            }
+            return Ok(response);
+         }
+
+         [HttpDelete("{id}")]
+
+         // pass the id inside the parameter
+         // async Task is used to pass the asynchronous task and await is used to wait for the task to complete
+         public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> DeleteCharacter(int id)
+         {
+            
+            var response = await _characterService.DeleteCharacter(id);
+            if (response.Data is null)
+            {
+               // NotFound: 404
+               return NotFound(response);
+            }
+            return Ok(response);
+         }
     }
 }

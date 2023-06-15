@@ -26,6 +26,9 @@
     - add getcharacterdto and addcharacterdto files in Dtos/Character
     - change character -> getcharacterdto or addcharcterdto 
 19. Introduction to AutoMapper,
+    - put automapper inside characterservice.cs file 
+    - add profile to all the mapper on AutoMapperProfile.cs file
+    - issue : not being able to update the id as we POST --> pass in the argument of assigning id to max +1 inside add character function 
 20. Modifying a character using PUT,
 21. Modifying a character using AutoMapper,
 22. Deleting a character,
