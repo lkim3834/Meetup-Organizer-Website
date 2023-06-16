@@ -60,7 +60,7 @@ HTTP Request Methods ( defined )
   - test it on the website
          
       
-    ![sql_view_WEBAPI](https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/23289f5c-9888-4436-aeed-9c8893e3e06b)
+![sql_view_WEBAPI](https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/23289f5c-9888-4436-aeed-9c8893e3e06b)
 
 # Structure for the Web API 
 
