@@ -53,9 +53,12 @@ HTTP Request Methods ( defined )
     * install tool command : - dotnet tool update --global dotnet-ef
     * Azure Data Studio :
 
-        - add a new query to add new data to the tables  : 
-    
-<img width="700" alt="Screenshot 2023-06-15 at 3 33 39 PM" src="https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/48926033-8f8e-4069-a0d3-4cfa1829ed83">
+        - add a new query to add new data to the tables
+        - test it on the website
+         
+         <img width="700" alt="Screenshot 2023-06-15 at 3 33 39 PM" src="https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/efa3a728-735f-4bc4-9de1-d140a95cd8e68">
+
+       
 
 
 <structure for the web API>  
