@@ -58,9 +58,10 @@ HTTP Request Methods ( defined )
 
   - add a new query to add new data to the tables
   - test it on the website
-         
+ ![sql_view_WEBAPI](https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/2a486b35-38f0-44a3-a558-3d37a35c407b)
+ 
 
-![sql_view_WEBAPI](https://github.com/lkim3834/Meetup-Organizer-Website/assets/sql_view_WEBAPI.png)
+
 
 # Structure for the Web API 
 
