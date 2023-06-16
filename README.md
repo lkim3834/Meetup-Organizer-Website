@@ -62,8 +62,7 @@ HTTP Request Methods ( defined )
       
     ![sql_view_WEBAPI](https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/23289f5c-9888-4436-aeed-9c8893e3e06b)
 
-
-<structure for the web API>  
+# Structure for the Web API 
 
        DTO          DTO        Model  
 Client -> Controller -> Service -> Database
