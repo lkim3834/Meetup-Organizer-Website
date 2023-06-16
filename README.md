@@ -54,7 +54,9 @@ HTTP Request Methods ( defined )
     * Azure Data Studio :
 
         - add a new query to add new data to the tables  : 
-   
+    
+<img width="700" alt="Screenshot 2023-06-15 at 3 33 39 PM" src="https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/48926033-8f8e-4069-a0d3-4cfa1829ed83">
+
 
 <structure for the web API>  
 
