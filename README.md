@@ -18,8 +18,10 @@ A website, event organization platform, meant to make it easier for people to cr
 * Real World concepts & practices 
 * Dependency injection, async/await, DTOs 
 
+# HTTP request methods GET, POST, PUT & DELETE
+<img width="1436" alt="Screenshot 2023-06-16 at 9 48 55 AM" src="https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/741bfeca-d4b7-41a7-ad2f-72c45c7401ed">
 
-# Web API using .NEt 7 
+# Web API using .NET 7 
 reference cite : https://www.youtube.com/watch?v=9zJn3a7L1uE 
 page link : http://localhost:5121/swagger/index.html 
 use SwaggerHub website along with this project 
@@ -46,19 +48,19 @@ HTTP Request Methods ( defined )
         b. Add it on Program.cs file and CharacterService.cs
 
 # Web API using Microft entity frameworkcore
-    * Install the package ( https://www.nuget.org/packages/Microsoft.EntityFrameworkCore)
-    * command : - dotnet add package Microsoft.EntityFrameworkCore
-                - dotnet add package Microsoft.EntityFrameworkCore.SQLServer
-                - dotnet add package Microsoft.EntityFrameworkCore.Design
-    * install tool command : - dotnet tool update --global dotnet-ef
-    * Azure Data Studio :
+* Install the package ( https://www.nuget.org/packages/Microsoft.EntityFrameworkCore)
+* command : - dotnet add package Microsoft.EntityFrameworkCore
+            - dotnet add package Microsoft.EntityFrameworkCore.SQLServer
+            - dotnet add package Microsoft.EntityFrameworkCore.Design
+* install tool command :
+            - dotnet tool update --global dotnet-ef
+* Azure Data Studio :
 
-        - add a new query to add new data to the tables
-        - test it on the website
+  - add a new query to add new data to the tables
+  - test it on the website
          
-         <img width="700" alt="Screenshot 2023-06-15 at 3 33 39 PM" src="https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/efa3a728-735f-4bc4-9de1-d140a95cd8e68">
-
-       
+      
+    ![sql_view_WEBAPI](https://github.com/lkim3834/Meetup-Organizer-Website/assets/63019945/23289f5c-9888-4436-aeed-9c8893e3e06b)
 
 
 <structure for the web API>  
